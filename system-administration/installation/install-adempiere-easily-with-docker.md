@@ -47,7 +47,7 @@ git clone https://github.com/adempiere/adempiere-docker.git
 
 Open a shell command terminal and run the following statements:
 
-Edit and modify the default settings for the PostgreSQL database 
+Edit and modify the default settings for the PostgreSQL database
 
 ```bash
 cd adempiere-docker

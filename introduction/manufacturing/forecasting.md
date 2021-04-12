@@ -8,11 +8,11 @@ description: >-
 
 ## Overview
 
-Forecasting is a way to estimate the future quantity and revenue from sales of products or services over a period of time.  Forecasts use quantitative and statistical methods based on historical data and market statistics to predict future sales.
+Forecasting is a way to estimate the future quantity and revenue from sales of products or services over a period of time. Forecasts use quantitative and statistical methods based on historical data and market statistics to predict future sales.
 
 The projected quantities and sales amounts can be used for decision making, pricing, cash flow, estimated future demand, calculating master production schedule, supply plan and future capacity requirements.
 
-A forecast is basically a set of products, quantities and time that shows how much of a particular product will be required or sold at that time.  The forecast data is used by the Material Resource Planning to drive the material planning processes which will trigger purchase demands for raw material and production activity to generate the required products in time to meet the forecast.
+A forecast is basically a set of products, quantities and time that shows how much of a particular product will be required or sold at that time. The forecast data is used by the Material Resource Planning to drive the material planning processes which will trigger purchase demands for raw material and production activity to generate the required products in time to meet the forecast.
 
 Forecasts have several basic components that are discussed in detail below:
 
@@ -25,11 +25,11 @@ Forecasts have several basic components that are discussed in detail below:
 
 ## Operational Calendar
 
-The operation calendars defined the set of periods that will be used in the forecast calculations and reports.  These periods are like buckets or measurement cycles with a specific duration.    
+The operation calendars defined the set of periods that will be used in the forecast calculations and reports. These periods are like buckets or measurement cycles with a specific duration.
 
-For planning purposes, the choice of period size depends on your manufacturing and sales turnover time.  Typically, the periods will be weekly or monthly.  Too small periods can result in excessive data that is difficult to deal with.  Periods that are too large can generate manufacturing plans that are not efficient resulting in excessive inventory.  You can create multiple calendars to test which approach works best for your situation.
+For planning purposes, the choice of period size depends on your manufacturing and sales turnover time. Typically, the periods will be weekly or monthly. Too small periods can result in excessive data that is difficult to deal with. Periods that are too large can generate manufacturing plans that are not efficient resulting in excessive inventory. You can create multiple calendars to test which approach works best for your situation.
 
-To define the Operational Calendar open the **Operational Calendar** window in the **Manufacturing Management -&gt; Planning Management -&gt; Forecast Management** menu. 
+To define the Operational Calendar open the **Operational Calendar** window in the **Manufacturing Management -&gt; Planning Management -&gt; Forecast Management** menu.
 
 ![Operational Calendar window](../../.gitbook/assets/webui_forecast_operationalcalendar.png)
 
@@ -37,7 +37,7 @@ Create a new record and give it a name and description. Save the record and move
 
 ### Period Definition
 
-The **Period Definition** tab, provides a way to create periods to use in the Forecast.  
+The **Period Definition** tab, provides a way to create periods to use in the Forecast.
 
 ![Operational Calendar window, Period Definition tab](../../.gitbook/assets/webui_forecast_operationalcalendar_perioddefinition.png)
 
@@ -50,12 +50,12 @@ The main fields here are:
 | _**Year**_ | The Calendar Year that the periods will start in.  This only applies if a _**Start Date**_ is not set in the **Create Periods** process discussed below.  If a _**Start Date**_ is specified, the "year" used will be the year of that date instead of this field. |
 
 {% hint style="warning" %}
-At the time of writing, the _**Start Date**_ parameter is mandatory, making the _**Year**_  field irrelevant. See issue [\#3013](https://github.com/adempiere/adempiere/issues/3013).
+At the time of writing, the _**Start Date**_ parameter is mandatory, making the _**Year**_ field irrelevant. See issue [\#3013](https://github.com/adempiere/adempiere/issues/3013).
 {% endhint %}
 
 #### Creating the Periods
 
-With the Period Definition record completed, the periods are created by clicking the button _**Create Periods**_ below the _**Year**_  field in the **Period Definition** tab.  
+With the Period Definition record completed, the periods are created by clicking the button _**Create Periods**_ below the _**Year**_ field in the **Period Definition** tab.
 
 ![Create Periods process dialog](../../.gitbook/assets/webui_forecast_operationalcalendar_perioddefinition_createperiods.png)
 
@@ -65,27 +65,27 @@ The parameters for the process are as follows:
 | :--- | :--- |
 | _**Start Date**_ | The start date for the periods. |
 | _**Number of Periods**_ | 12 or 52 are allowed, providing monthly or weekly periods. |
-| _**Date Format**_ | The period name will follow the date format entered here.  This uses the Java [SimpleDateFormat](https://docs.oracle.com/javase/9/docs/api/java/text/SimpleDateFormat.html) pattern.   |
+| _**Date Format**_ | The period name will follow the date format entered here.  This uses the Java [SimpleDateFormat](https://docs.oracle.com/javase/9/docs/api/java/text/SimpleDateFormat.html) pattern. |
 
-The Periods begin on the start date specified.  The format pattern should be enough to differentiate the period.  For example, a common format for months would be "yyyy-MM" which would create periods that can be sorted in chronological order by year and month.  For weeks, you might use "yyyy-MM-DD' \('w'\)'" which would give the start date of each week period and the week number in brackets.
+The Periods begin on the start date specified. The format pattern should be enough to differentiate the period. For example, a common format for months would be "yyyy-MM" which would create periods that can be sorted in chronological order by year and month. For weeks, you might use "yyyy-MM-DD' \('w'\)'" which would give the start date of each week period and the week number in brackets.
 
 {% hint style="warning" %}
-If you run the Create Periods process multiple times, it will create multiple versions of the periods.  While you can use this to generate periods over multiple years, you can also duplicate periods within the year if you are not careful.  If you do need to redo the Create Periods process, please delete the existing periods first. See issue [\#3014](https://github.com/adempiere/adempiere/issues/3014).
+If you run the Create Periods process multiple times, it will create multiple versions of the periods. While you can use this to generate periods over multiple years, you can also duplicate periods within the year if you are not careful. If you do need to redo the Create Periods process, please delete the existing periods first. See issue [\#3014](https://github.com/adempiere/adempiere/issues/3014).
 {% endhint %}
 
 ### Periods
 
-The periods created by the process are listed in the **Periods** tab which is embedded in the **Period Definition** tab.  Each period has a name, period number, start date and end date, which set the date range for the specified period.  You can manually manipulate the periods if required.
+The periods created by the process are listed in the **Periods** tab which is embedded in the **Period Definition** tab. Each period has a name, period number, start date and end date, which set the date range for the specified period. You can manually manipulate the periods if required.
 
 ## Sales History
 
-The forecasts are created by extrapolating a historical trend.  This trend is defined either by the sales contained in historical invoices or directly from an import of data.  The sales history provides the statistical data required to generate a forecast.
+The forecasts are created by extrapolating a historical trend. This trend is defined either by the sales contained in historical invoices or directly from an import of data. The sales history provides the statistical data required to generate a forecast.
 
 ### Generating Sales History from Invoices
 
 Not every invoice is relevant when it comes to forecasting so the process of creating the history is selective and only copies relevant information from the invoices into the sales history.
 
-The filters used to select the relevant invoices include: 
+The filters used to select the relevant invoices include:
 
 * business partner; 
 * business partner group;
@@ -99,25 +99,25 @@ The filters used to select the relevant invoices include:
 * sales region;
 * project; and more
 
-To generate the sales history, run the **Generate Sales History** process found  in the **Manufacturing Management -&gt; Planning Management -&gt; Forecast Management** menu.
+To generate the sales history, run the **Generate Sales History** process found in the **Manufacturing Management -&gt; Planning Management -&gt; Forecast Management** menu.
 
 ![Generate Sales History process parameters](../../.gitbook/assets/webui_forecast_generatesaleshistory.png)
 
-As you can see in the image, there are a large number of parameters. Only the _**Date Invoiced**_ range is mandatory. 
+As you can see in the image, there are a large number of parameters. Only the _**Date Invoiced**_ range is mandatory.
 
 ### Importing Sales History
 
-When ADempiere does not hold enough data to provide its own sales history, there is the possibility of importing data from other sources, such as a legacy system.  The import is performed using the standard [Data Import](../system-administration/data/data-import.md) processes.  The import can be used to provide the sales statistics necessary to perform the forecast.
+When ADempiere does not hold enough data to provide its own sales history, there is the possibility of importing data from other sources, such as a legacy system. The import is performed using the standard [Data Import](../system-administration/data/data-import.md) processes. The import can be used to provide the sales statistics necessary to perform the forecast.
 
-There is an **Import Sales History** import format that can be used or modified to suit your needs.  At a minimum, the sales history needs to know the qty invoiced, the invoiced date, the warehouse that the products were shipped from and the business partner who was invoiced.  The sales history can provide much richer data than that though including business partner data, prices, costs and reference values.
+There is an **Import Sales History** import format that can be used or modified to suit your needs. At a minimum, the sales history needs to know the qty invoiced, the invoiced date, the warehouse that the products were shipped from and the business partner who was invoiced. The sales history can provide much richer data than that though including business partner data, prices, costs and reference values.
 
 The historical sales information is used to realize the forecast calculus and to get sales statistics reports.
 
 ## Forecasting Rules
 
-The Forecasting Rules define the mathematical and statistical methods that are available to calculate the forecast given a set of Sales History data.  These rules are used in the Forecast Definition to define how the forecast will be calculated. There are nine rules provided in the core application but it is possible to extend these with others by providing the appropriate software classes.  The rules are described in detail in [Engineering Statistics Handbook, 6.4 Introduction to Time Series Analysis](https://www.itl.nist.gov/div898/handbook/pmc/section4/pmc4.htm) by Author Steven R. Gould.  The summaries below are taken from this reference.
+The Forecasting Rules define the mathematical and statistical methods that are available to calculate the forecast given a set of Sales History data. These rules are used in the Forecast Definition to define how the forecast will be calculated. There are nine rules provided in the core application but it is possible to extend these with others by providing the appropriate software classes. The rules are described in detail in [Engineering Statistics Handbook, 6.4 Introduction to Time Series Analysis](https://www.itl.nist.gov/div898/handbook/pmc/section4/pmc4.htm) by Author Steven R. Gould. The summaries below are taken from this reference.
 
-In the **Forecast Definition** window, the Simulation parameters can be entered.  How these parameters apply to the Rules depends on the rule.  
+In the **Forecast Definition** window, the Simulation parameters can be entered. How these parameters apply to the Rules depends on the rule.
 
 ### Moving Average
 
@@ -125,13 +125,13 @@ In the **Forecast Definition** window, the Simulation parameters can be entered.
 | :--- | :--- |
 | _**User Factor**_ | Define the number of periods to average.  For example, if the sales history data is using weeks and a 10-week moving average is required, set the _**User Factor**_ to 10.  This also determines the maximum number of periods that can be forecast into the future. |
 
-A moving average forecast model is based on an artificially constructed time series in which the value for a given time period is replaced by the mean of that value and the values for some number of preceding and succeeding time periods. As you may have guessed from the description, this model is best suited to time-series data; i.e. data that changes over time.  For example, many charts of individual stocks on the stock market show 20, 50, 100 or 200 day moving averages as a way to show trends.
+A moving average forecast model is based on an artificially constructed time series in which the value for a given time period is replaced by the mean of that value and the values for some number of preceding and succeeding time periods. As you may have guessed from the description, this model is best suited to time-series data; i.e. data that changes over time. For example, many charts of individual stocks on the stock market show 20, 50, 100 or 200 day moving averages as a way to show trends.
 
- Since the forecast value for any given period is an average of the previous periods, then the forecast will always appear to "lag" behind either increases or decreases in the observed \(dependent\) values.  For example, if a data series has a noticeable upward trend then a moving average forecast will generally provide an underestimate of the values of the dependent variable.
+Since the forecast value for any given period is an average of the previous periods, then the forecast will always appear to "lag" behind either increases or decreases in the observed \(dependent\) values. For example, if a data series has a noticeable upward trend then a moving average forecast will generally provide an underestimate of the values of the dependent variable.
 
- The moving average method has an advantage over other forecasting models in that it does smooth out peaks and troughs \(or valleys\) in a set of observations. However, it also has several disadvantages.  In particular this model does not produce an actual equation. Therefore, it is not all that useful as a medium-long range forecasting tool. It can only reliably be used to forecast one or two periods into the future.
+The moving average method has an advantage over other forecasting models in that it does smooth out peaks and troughs \(or valleys\) in a set of observations. However, it also has several disadvantages. In particular this model does not produce an actual equation. Therefore, it is not all that useful as a medium-long range forecasting tool. It can only reliably be used to forecast one or two periods into the future.
 
- The moving average model is a special case of the more general weighted moving average. In the simple moving average, all weights are equal. __
+The moving average model is a special case of the more general weighted moving average. In the simple moving average, all weights are equal. \_\_
 
 ### Simple Exponential Smoothing
 
@@ -153,7 +153,7 @@ The Single Exponential Smoothing rule uses the _**Factor Alpha**_ as the Smoothi
 
 The smoothing constant must be a value in the range 0.0-1.0. But, what is the "best" value to use for the smoothing constant? This depends on the data series being modeled. The speed at which the older responses are dampened \(smoothed\) is a function of the value of the smoothing constant. When this smoothing constant is close to 1.0, dampening is quick - more weight is given to recent observations - and when it is close to 0.0, dampening is slow - and relatively less weight is given to recent observations.
 
-The best value for the smoothing constant is the one that results in the smallest mean of the squared errors \(or other similar accuracy indicator\).  There are numerical methods for determining this value but these would have to be applied outside of ADempiere.
+The best value for the smoothing constant is the one that results in the smallest mean of the squared errors \(or other similar accuracy indicator\). There are numerical methods for determining this value but these would have to be applied outside of ADempiere.
 
 ### Double Exponential Smoothing
 
@@ -166,9 +166,9 @@ Double exponential smoothing - also known as Holt exponential smoothing - is a r
 
 Note that double exponential smoothing still does not address seasonality. For better exponentially smoothed forecasts using data where there is expected or known to be seasonal variation in the data, use triple exponential smoothing.
 
-As with simple exponential smoothing, in double exponential smoothing models past observations are given exponentially smaller weights as the observations get older. In other words, recent observations are given relatively more weight in forecasting than the older observations. 
+As with simple exponential smoothing, in double exponential smoothing models past observations are given exponentially smaller weights as the observations get older. In other words, recent observations are given relatively more weight in forecasting than the older observations.
 
-Double Exponential Smoothing uses _**Factor Alpha**_ ****and _**Factor Gamma**_ as the smoothing factors.  Factor Alpha smooths the base data and Factor Gamma smooths the trend.
+Double Exponential Smoothing uses _**Factor Alpha**_ **\*\*and \_**Factor Gamma\*\*\_ as the smoothing factors. Factor Alpha smooths the base data and Factor Gamma smooths the trend.
 
 ### Triple Exponential Smoothing
 
@@ -183,11 +183,11 @@ Simple exponential smoothing models work best with data where there are no trend
 
 For better exponentially smoothed forecasts of data where there is expected or known to be seasonal variation in the data, use triple exponential smoothing.
 
-As with simple exponential smoothing, in triple exponential smoothing models past observations are given exponentially smaller weights as the observations get older. In other words, recent observations are given relatively more weight in forecasting than the older observations.  
+As with simple exponential smoothing, in triple exponential smoothing models past observations are given exponentially smaller weights as the observations get older. In other words, recent observations are given relatively more weight in forecasting than the older observations.
 
 At least two complete cycles \(years\) of data are required to initialize the model. For best results, more data is recommended - ideally a minimum of 4 or 5 complete cycles. This gives the model a chance to better adapt to the data, instead of relying on getting - guessing - good estimates for the initial conditions.
 
-The parameters for the triple exponential smoothing algorithm are determined using a best-fit Mean Square Error \(MSE\) approach.  As a result, only the tolerances for the alpha and beta smoothing parameters are required.
+The parameters for the triple exponential smoothing algorithm are determined using a best-fit Mean Square Error \(MSE\) approach. As a result, only the tolerances for the alpha and beta smoothing parameters are required.
 
 ### Polynomial Regression
 
@@ -195,7 +195,7 @@ The parameters for the triple exponential smoothing algorithm are determined usi
 The implementation of the Polynomial Regression algorithm does not take any parameters.
 {% endhint %}
 
-This rule implements a single variable polynomial regression model using the variable named in the constructor as the independent variable. The coefficients of the regression as well as the accuracy indicators are determined from the data set used in the initialization.  
+This rule implements a single variable polynomial regression model using the variable named in the constructor as the independent variable. The coefficients of the regression as well as the accuracy indicators are determined from the data set used in the initialization.
 
 A single variable polynomial regression model essentially attempts to put a polynomial line - a curve if you prefer - through the data points. Mathematically, assuming the independent variable is x and the dependent variable is y, then this line can be represented as:
 
@@ -203,7 +203,7 @@ $$
 y = a0 + a1*x + a2*x^2 + a3*x^3 + ... + am*x^m
 $$
 
-The default for the order $$m$$ is 10  but the order is reduced to the square root of the number of data points if there are less than 100 data points.
+The default for the order $$m$$ is 10 but the order is reduced to the square root of the number of data points if there are less than 100 data points.
 
 ### Regression
 
@@ -213,7 +213,7 @@ The implementation of the Regression algorithm does not take any parameters.
 
 This model implements a single variable linear regression. The coefficients of the regression - the intercept and the slope - as well as the accuracy indicators are determined from the sales history and are applied to the forecast.
 
-A single variable linear regression model essentially attempts to put a straight line through the data points. For the more mathematically inclined, this line is defined by its gradient or slope, and the point at which it intercepts the x-axis \(i.e. where the independent variable has, perhaps only theoretically, a value of zero\). Mathematically, assuming the independent variable is x and the dependent variable is y, then this line can be represented as:  
+A single variable linear regression model essentially attempts to put a straight line through the data points. For the more mathematically inclined, this line is defined by its gradient or slope, and the point at which it intercepts the x-axis \(i.e. where the independent variable has, perhaps only theoretically, a value of zero\). Mathematically, assuming the independent variable is x and the dependent variable is y, then this line can be represented as:
 
 $$
 y = intercept + slope * x
@@ -225,7 +225,7 @@ $$
 The implementation of the Multiple Linear Regression algorithm does not take any parameters.
 {% endhint %}
 
-This model implements multiple variable linear regression but with only one independent variable, time.  So in effect, it is no different than the Linear Regression model.
+This model implements multiple variable linear regression but with only one independent variable, time. So in effect, it is no different than the Linear Regression model.
 
 It might be interesting to use this model to forecast demand given time and say price but the current implementation will not allow that.
 
@@ -243,7 +243,7 @@ This really is a simplistic model, and is included partly for completeness and p
 
 ## Forecast Definition
 
-The **Forecast Definition** window provides a way to manipulate the creation of the forecast by focusing on sets of specific information.  Essentially, the complete forecast can be treated as a number of very focused forecasts, each looking at different data and using different parameters to forecast that data.  
+The **Forecast Definition** window provides a way to manipulate the creation of the forecast by focusing on sets of specific information. Essentially, the complete forecast can be treated as a number of very focused forecasts, each looking at different data and using different parameters to forecast that data.
 
 The Forecast Definition includes a header, which has the standard identifying fields and an embedded tab for the **Forecast Definition Lines**.
 
@@ -319,21 +319,21 @@ This process allows to generate a forecast based on the forecast simulation calc
 
 The process uses the resulting simulation values ​ to generate a new forecast.
 
-Action Type of the forecast:  It Indicates how the forecast will be generated
+Action Type of the forecast: It Indicates how the forecast will be generated
 
-If the action type is "Replace" all lines of this forecast are going to be  eliminated and will be generated again, based on the simulation products and the selection criteria.
+If the action type is "Replace" all lines of this forecast are going to be eliminated and will be generated again, based on the simulation products and the selection criteria.
 
-If the action type  is "Merge" all lines of this forecast will be combined, based on the unique combination of product, warehouse and period. Therefore, if the combination exists, the forecast quantities are accumulated.
+If the action type is "Merge" all lines of this forecast will be combined, based on the unique combination of product, warehouse and period. Therefore, if the combination exists, the forecast quantities are accumulated.
 
 The Load Type of forecast: Indicates which date of the period will be used to determine the forecast line promised date.
 
 Options:
 
-To Use the Period Start Date: The due date is set  based on the period start date
+To Use the Period Start Date: The due date is set based on the period start date
 
-To Use the Period End Date:  The due date is set based on the period end date.
+To Use the Period End Date: The due date is set based on the period end date.
 
-Days after the due date:  Indicates the number of days to be added or subtracted to the due date. If the value is negative, the days are subtracted.
+Days after the due date: Indicates the number of days to be added or subtracted to the due date. If the value is negative, the days are subtracted.
 
 #### Selection Criteria:
 
@@ -343,7 +343,7 @@ It is possible to use the category, classification, class and group of the produ
 
 The Forecast window allows to maintain the sales forecast information for an organization.
 
-Inside the forecast window the field  Price List has to be defined to determine the sales goal amounts and to obtain an estimated value for the sales plan by sales representative.
+Inside the forecast window the field Price List has to be defined to determine the sales goal amounts and to obtain an estimated value for the sales plan by sales representative.
 
 The Forecast report show the Sales Plan , the goal amounts which has to be accomplished, the information to be grouped by sales representative, product, warehouse and period.
 
@@ -351,9 +351,9 @@ The field Operational Calendar and Periods Definition, must be defined to determ
 
 The forecast lines can be captured manually entering the sales representative, product, warehouse, quantity, period or it can be generated from a simulation using the Generate forecast process.
 
-The products and its quantities are considered by MRP when  the forecast is already  processed, ADempiere allows to have several forecast simultaneously.
+The products and its quantities are considered by MRP when the forecast is already processed, ADempiere allows to have several forecast simultaneously.
 
-If you don’t want that MRP considers a Forecast processed,  it should be deactivated.
+If you don’t want that MRP considers a Forecast processed, it should be deactivated.
 
 ### Forecast Report:
 

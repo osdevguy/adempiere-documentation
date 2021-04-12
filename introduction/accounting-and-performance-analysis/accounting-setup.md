@@ -4,7 +4,7 @@ description: How to setup the accounting system in ADempiere
 
 # Accounting Setup
 
-The process for setting up the accounting system in ADempiere is partially done when the Client is created.  A set of default accounts is required in the Client creation process and these ensure the system will work as soon as the Client is first used.  The setup process modifies these initial defaults so the accounting is tailored to your enterprise.
+The process for setting up the accounting system in ADempiere is partially done when the Client is created. A set of default accounts is required in the Client creation process and these ensure the system will work as soon as the Client is first used. The setup process modifies these initial defaults so the accounting is tailored to your enterprise.
 
 There are six main steps in the setup:
 

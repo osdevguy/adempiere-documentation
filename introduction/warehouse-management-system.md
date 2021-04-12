@@ -49,7 +49,3 @@ The final step involves Generate Shipments from Outbound Order
 
 ![](../.gitbook/assets/image%20%2822%29.png)
 
-
-
-
-

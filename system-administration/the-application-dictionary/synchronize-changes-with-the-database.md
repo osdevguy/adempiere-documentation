@@ -8,15 +8,15 @@ description: >-
 
 ## Why Synchronization is Important
 
-Records in the Application Dictionary for Columns or Tables describe actual columns and tables in the database.  It is important that the Application Dictionary accurately reflects the structure of the database.  If it didn't the application may, for example,  try to access data from a column that doesn't exist. 
+Records in the Application Dictionary for Columns or Tables describe actual columns and tables in the database. It is important that the Application Dictionary accurately reflects the structure of the database. If it didn't the application may, for example, try to access data from a column that doesn't exist.
 
 {% hint style="danger" %}
-It is not recommended to make changes that require synchronization in a production environment, especially when there are many users connected to the database.  The synchronization transaction that applies the DLL changes can cause locks on the tables that may make the application feel slow for the duration of the transaction.  Its best to make the changes off-line or in a development environment and then migrate the changes to the production system using the XML migration scripts or the pack-out/in  functionality. 
+It is not recommended to make changes that require synchronization in a production environment, especially when there are many users connected to the database. The synchronization transaction that applies the DLL changes can cause locks on the tables that may make the application feel slow for the duration of the transaction. Its best to make the changes off-line or in a development environment and then migrate the changes to the production system using the XML migration scripts or the pack-out/in functionality.
 {% endhint %}
 
 ## How to Synchronize Changes
 
-Every time you make a change in the Application Dictionary that affects a column or table definition, the changes have to be synchronized with the database.  There are three ways to do this:
+Every time you make a change in the Application Dictionary that affects a column or table definition, the changes have to be synchronized with the database. There are three ways to do this:
 
 1. On the **Column** tab of the **Tables and Columns** window, there is a button to _**Synchronize Column**_. Click this button to synchronize the column with the database.
 2. In the **Application Dictionary**  Menu, run the process **Synchronize all Table and Columns**.
@@ -30,7 +30,7 @@ Every time you make a change in the Application Dictionary that affects a column
 
 ### Using the Synchronize Column Button
 
-When you add a table for the first time, a number of columns are automatically  added to the **Column** tab for that table.  You might also create columns of your own.  When you click the _**Synchronize Column**_ button, the application will check to see if the table exists in the database and, if not, will create the table and **all** the columns, not just the column shown in the **Column** tab.  If the table exists, only the current column is synchronized.
+When you add a table for the first time, a number of columns are automatically added to the **Column** tab for that table. You might also create columns of your own. When you click the _**Synchronize Column**_ button, the application will check to see if the table exists in the database and, if not, will create the table and **all** the columns, not just the column shown in the **Column** tab. If the table exists, only the current column is synchronized.
 
 ![Column tab of the Table window](../../.gitbook/assets/webui_sync_synccolbutton.png)
 
@@ -39,16 +39,16 @@ When you add a table for the first time, a number of columns are automatically  
 After the process has run, the results will display the DDL commands used to update the database.
 
 {% hint style="info" %}
-If you are adding or changing  a number of columns in a table that has been synchronized in the past, you will have to synchronize each new or modified column in turn.
+If you are adding or changing a number of columns in a table that has been synchronized in the past, you will have to synchronize each new or modified column in turn.
 {% endhint %}
 
 ![Results of the Synchronize Column process showing the SQL commands used to update the database.](../../.gitbook/assets/webui_sync_synccolprocessresult.png)
 
 ### Using the Process Synchronize All Tables and Columns
 
-This process, found in the **Application Dictionary** menu, will synchronize every table or column that requires synchronization.  This is a convenient way to deal with a large number of changes and ensure that all changes are synchronized.  The process results will display the number of tables and columns updated as well as the DDL commands used to make the updates.
+This process, found in the **Application Dictionary** menu, will synchronize every table or column that requires synchronization. This is a convenient way to deal with a large number of changes and ensure that all changes are synchronized. The process results will display the number of tables and columns updated as well as the DDL commands used to make the updates.
 
-The process parameters allow you to select a single table or a single column to synchronize.  You can also choose to only synchronize "known" changes, meaning changes recognized by the ADempiere application.  Alternatively, the tables and columns will be checked against the database metadata and any differences will be corrected. If desired, the results can be reported before they are applied so you can verify the synchronization will be correct. 
+The process parameters allow you to select a single table or a single column to synchronize. You can also choose to only synchronize "known" changes, meaning changes recognized by the ADempiere application. Alternatively, the tables and columns will be checked against the database metadata and any differences will be corrected. If desired, the results can be reported before they are applied so you can verify the synchronization will be correct.
 
 {% hint style="info" %}
 If you choose to compare the application dictionary with the database for all tables and columns, please note that this will take some time.
@@ -56,15 +56,15 @@ If you choose to compare the application dictionary with the database for all ta
 
 ### Using the System Configuration Entry
 
-Open the **System Configuration** window and find the entry for "DATABASE\_AUTO\_SYNC".  To turn the Auto Sync function off, set the _**Value**_ to _N._ To turn it on, set the _**Value**_ to any other value, typically _Y_.
+Open the **System Configuration** window and find the entry for "DATABASE\_AUTO\_SYNC". To turn the Auto Sync function off, set the _**Value**_ to _N._ To turn it on, set the _**Value**_ to any other value, typically _Y_.
 
-With the Auto Sync function on, any change to the column or table definition that requires synchronization will be synchronized when the record is saved.  The change will happen in the background and an error will be displayed if there is a problem.
+With the Auto Sync function on, any change to the column or table definition that requires synchronization will be synchronized when the record is saved. The change will happen in the background and an error will be displayed if there is a problem.
 
 This is an easy way to manage changes as the tables and columns created/changed are immediately available for use.
 
 ## Limitations
 
-Generally, the synchronization works well with new columns and tables.  For other cases, the synchronization process is not perfect and may require some manual intervention.  Here are the cases to be aware of:
+Generally, the synchronization works well with new columns and tables. For other cases, the synchronization process is not perfect and may require some manual intervention. Here are the cases to be aware of:
 
 * Tables defined as a View will not be synchronized.
 * Virtual Columns will not be synchronized.

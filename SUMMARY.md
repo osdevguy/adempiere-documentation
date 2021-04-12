@@ -1,6 +1,6 @@
 # Table of contents
 
-* [ADempiere Documentation](README.md)
+* [ADsuite Documentation](README.md)
 * [About this Documentation](readme-1/README.md)
   * [Copyright](readme-1/copyright.md)
   * [Conventions Used](readme-1/conventions-used.md)

@@ -118,7 +118,7 @@ Fill in the setup window fields as follows:
 Mail setup is optional but a server does have to be identified. The Setup Tool will finish successfully whether the mail tests work or not. You can maintain the mail server connection in the Application on a Client basis from the [**Client Window**](http://wiki.adempiere.net/ManPageW_Client). If you don't want to setup mail or don't have an SMTP server, just enter a valid server - the field defaults to the local computer name. As long as the server exists, the setup will finish successfully.
 
 {% hint style="info" %}
-The software only needs a method to send email. There is no ability to read email in the application. 
+The software only needs a method to send email. There is no ability to read email in the application.
 {% endhint %}
 
 ### Testing the Setup

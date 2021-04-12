@@ -16,8 +16,6 @@ Data entered into a field is not processed until the field loses focus or, unles
 
 The fields and buttons are similar between the Web Application and the Java Client.
 
-## 
-
 ## FileName [![Image:Icon\_Open24.png](http://wiki.adempiere.net/images/2/2e/Icon_Open24.png)](http://wiki.adempiere.net/File:Icon_Open24.png)
 
 The FileName control is intended to hold a file name that can be found in the local default directories. Clicking the button will open the File Chooser dialog where you can select the file of interest. You can also enter the file name in the text field directly.

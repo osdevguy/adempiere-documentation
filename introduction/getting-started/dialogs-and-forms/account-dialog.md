@@ -1,6 +1,6 @@
 # Account Dialog
 
-The **Account Dialog** provides a method to select an account from the Chart of Accounts and add [Accounting Dimensions](../../../glossary.md#accounting-dimension), effectively creating a "Combination" of dimensions that can be used to filter and sort accounting data in useful ways. The Combination is added to the list in the [**Account Combination**](https://adempiere.github.io/functional-guide/window/window-account-combination.html) _\*\*_window.
+The **Account Dialog** provides a method to select an account from the Chart of Accounts and add [Accounting Dimensions](../../../glossary.md#accounting-dimension), effectively creating a "Combination" of dimensions that can be used to filter and sort accounting data in useful ways. The Combination is added to the list in the [**Account Combination**](https://adempiere.github.io/functional-guide/window/window-account-combination.html) \_\*\*\_window.
 
 ## Access
 

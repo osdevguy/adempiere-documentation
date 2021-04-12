@@ -73,7 +73,7 @@ Suppose you have a list of invoices to import. Your list is in a spreadsheet whi
 If the _**Data Type**_ is "Date", be sure to indicate the format and watch for differences between systems, such as dd/mm/yy vs. mm/dd/yy.
 {% endhint %}
 
-As you create the Import Loader Format, it is helpful to create header rows in your spreadsheet that match the _**Start No**_ and _**Name**_ columns. Then, in the Import File Loader, when the csv file and the loader format are selected, the first two rows you see in the import loader form will be the spreadsheet headings and you can quickly compare those values with the form column headings. When columns contain an ID it is hard to know what ID it is so the column description can highlight errors. 
+As you create the Import Loader Format, it is helpful to create header rows in your spreadsheet that match the _**Start No**_ and _**Name**_ columns. Then, in the Import File Loader, when the csv file and the loader format are selected, the first two rows you see in the import loader form will be the spreadsheet headings and you can quickly compare those values with the form column headings. When columns contain an ID it is hard to know what ID it is so the column description can highlight errors.
 
 To get rid of this test data, you can then either:
 
@@ -86,7 +86,7 @@ To get rid of this test data, you can then either:
 In an ideal world, you want to perform the data import to the intermediate table without errors and then process the intermediate table, also without errors. Errors within ADempiere take more effort to fix than applying the same corrections to a spreadsheet. So, if at all possible, prepare the data in a spreadsheet before attempting the import.
 
 {% hint style="info" %}
-If you have too much data to deal with or no control over the format, you may have to consider developing a customer import loader - a software process. 
+If you have too much data to deal with or no control over the format, you may have to consider developing a customer import loader - a software process.
 {% endhint %}
 
 To properly prepare the data, it is important to understand the import process and what the Import File Loader and the Import processes are looking for.
@@ -121,7 +121,7 @@ In some cases, if related records are not already in the database, the import pr
 
 ### **Cross Linking Data**
 
-Where the import data uses different data formats than the database, you may need to perform a data translation using intermediate tables that relate the keys in the external data to the keys in the database. An example is where the source system for the data uses entirely different keys, values and names to describe records than ADempiere. A translation table provides a mechanism to find the ADempiere Search Key based on the source name or key value. 
+Where the import data uses different data formats than the database, you may need to perform a data translation using intermediate tables that relate the keys in the external data to the keys in the database. An example is where the source system for the data uses entirely different keys, values and names to describe records than ADempiere. A translation table provides a mechanism to find the ADempiere Search Key based on the source name or key value.
 
 In another actual example, an ADempiere installation replaced a POS/AR system that was run in parallel with Quickbooks. Here the issues was that the POS system and Quickbooks used different customer formats entirely. Linking was performed based on the corporate memory of the book keeper. ADempiere was loaded with Business Partners from Quickbooks but the AR invoices and payments had to use translation tables to ensure the debits and credits were charged to the correct accounts. In addition the Quickbooks chart of accounts was different than the ADempiere chart of accounts so translation was also required when importing trial balances and journal entries.
 
@@ -131,10 +131,10 @@ In practical terms, the intermediate table could be another spreadsheet in your 
 
 ### **Mandatory and Optional Fields**
 
-For advice on which fields are mandatory or optional, see the help for the individual Import windows.  Mandatory fields have to be included in the imported data.  
+For advice on which fields are mandatory or optional, see the help for the individual Import windows. Mandatory fields have to be included in the imported data.
 
 {% hint style="info" %}
-If the mandatory fields have the same value in all the data rows, its a good idea to add these to your spreadsheet and not use a Constant Value in the Import Loader Format.  Then all the data for your import is coming from one place, your data file.
+If the mandatory fields have the same value in all the data rows, its a good idea to add these to your spreadsheet and not use a Constant Value in the Import Loader Format. Then all the data for your import is coming from one place, your data file.
 {% endhint %}
 
 ## Defining the Import Loader Format
@@ -149,7 +149,7 @@ Fixed position data is treated differently than the other three and the meaning 
 0000000001111111111222222222233333333334444444444555555555566666666667
 1234567890123456789012345678901234567890123456789012345678901234567890
 007BOND, James         My name is Bond, James Bond.  MI5  Molly Penny 
-   Jolly Green Giant   Look up. Way up!              CBC  Rusty        
+   Jolly Green Giant   Look up. Way up!              CBC  Rusty
 ```
 
 and save the file in &lt;ADEMPIERE\_HOME&gt;\data\import. \(This is for convenience. You can save it anywhere.\) The first two lines are there only to help with the column numbering.
@@ -174,15 +174,15 @@ Using the **&lt;** and **&gt;** buttons, move to the third line. You should see 
 
 ### **Delimited Data**
 
-Delimited data using CSV, tab or other customer separator character is interpreted in columns of data. 
+Delimited data using CSV, tab or other customer separator character is interpreted in columns of data.
 
 {% hint style="info" %}
-The _**Start No**_ is the column number with the left most column being 1.  Any column with _**Start No**_ = 0 will be ignored.
+The _**Start No**_ is the column number with the left most column being 1. Any column with _**Start No**_ = 0 will be ignored.
 {% endhint %}
 
-Each data line is read sequentially to find the delimiters.  
+Each data line is read sequentially to find the delimiters.
 
-If fields include the delimiter character, ensure they are surrounded by double quotes \("\).   Double quotes can be included in the data by using them twice \(""\). For example: a CSV line of "Artikel,bez","Artikel,""nr""",DEM,EUR results in four data fields:
+If fields include the delimiter character, ensure they are surrounded by double quotes \("\). Double quotes can be included in the data by using them twice \(""\). For example: a CSV line of "Artikel,bez","Artikel,""nr""",DEM,EUR results in four data fields:
 
 * Artikel,bez
 * Artikel,"nr"
@@ -213,7 +213,7 @@ Numbers are read as strings and converted to numbers as follows:
 * All characters except '.' and '-' are removed from the string and the string converted to a Big Decimal. If the remaining string has no characters left, the number is set to zero \(0\).
 * If Divide by 100 is selected in the **Import Format Tab**, the number is divided by 100.
 
-This means that it is possible to correctly interpret numbers in string format 'zz-a1,b2,c3,@@@45,,,asog6.7@8@9@0@@@' as -123456.789. 
+This means that it is possible to correctly interpret numbers in string format 'zz-a1,b2,c3,@@@45,,,asog6.7@8@9@0@@@' as -123456.789.
 
 Incorrect placement of or multiple minus signs '-' and decimal characters will cause errors.
 
@@ -222,7 +222,7 @@ Incorrect placement of or multiple minus signs '-' and decimal characters will c
 Strings are read directly with the exception of the following character sequences which are changed to work with SQL.
 
 * \' is changed to ''
-* \\ is changed to \\\\
+* \ is changed to \\
 
 #### **Constants**
 
@@ -233,17 +233,17 @@ The Constant Value is parsed in the same way as strings \(above\) except if the 
 {% hint style="info" %}
 If you have a constant, which has a number value, but the corresponding field is a string \(i.E. BPartner\_Value\), you may get an exception, because the generated sql does not have the valid syntax. For example
 
- `WHERE ... BPartner_Value=123` 
+`WHERE ... BPartner_Value=123`
 
-instead of 
+instead of
 
-`WHERE ... BPartner_Value='123'`. 
+`WHERE ... BPartner_Value='123'`.
 
 The work-around is to define the constant value as 123&lt;Space&gt;. This is treated as a string and the trailing space is trimmed.
 {% endhint %}
 
 {% hint style="info" %}
-To keep all your import data in one place, its better to add the "constant" fields to your spreadsheet data and import it directly.  With constants, some of the data is in your file, and some in the Import File Loader format.
+To keep all your import data in one place, its better to add the "constant" fields to your spreadsheet data and import it directly. With constants, some of the data is in your file, and some in the Import File Loader format.
 {% endhint %}
 
 #### **Scripts, Callouts and Advanced Processing**
@@ -266,7 +266,7 @@ Once the Import File Format is loaded, the columns should appear in the lower pa
 
 If the data appears to be read properly, then you can click the green check mark and import the data into the temporary table. This can take a while with large imports, so please be patient.
 
-A dialog will appear showing the number of records read and imported. These should be the same. If not, there were problems that you will have to investigate. Check the console log for messages and verify that the data type of the columns matches the data type of the target fields.  Another cause is duplicated data or data that violates multiple key constraints.  When importing products, for example, the UPC codes need to be unique.  If any are duplicated, the row is discarded. 
+A dialog will appear showing the number of records read and imported. These should be the same. If not, there were problems that you will have to investigate. Check the console log for messages and verify that the data type of the columns matches the data type of the target fields. Another cause is duplicated data or data that violates multiple key constraints. When importing products, for example, the UPC codes need to be unique. If any are duplicated, the row is discarded.
 
 With the import completed, you can now open the target Import table and review the data.
 
@@ -338,11 +338,11 @@ org.postgresql.util.PSQLException: ERROR: operator does not exist: character var
 ...
 ```
 
-It is likely that you used a numerical Constant. These need to be treated specially.  See [Constants](data-import.md#constants)
+It is likely that you used a numerical Constant. These need to be treated specially. See [Constants](data-import.md#constants)
 
 ### **Import File Loader discards input records**
 
 Import File Loader ends successfully with but the number of records in the data and the number imported are different.
 
-Check the uniqueness rules.  There is uniqueness defined in the Import File Loader process for the Product table. The columns UPC and Value must be unique in the data file. Also the concatenated BPartner\_Value+VendorProductNo must be unique. These are not a database constraints - just software rules. No message is displayed if the rules are violated, but the records are discarded.
+Check the uniqueness rules. There is uniqueness defined in the Import File Loader process for the Product table. The columns UPC and Value must be unique in the data file. Also the concatenated BPartner\_Value+VendorProductNo must be unique. These are not a database constraints - just software rules. No message is displayed if the rules are violated, but the records are discarded.
 

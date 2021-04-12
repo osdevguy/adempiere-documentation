@@ -40,9 +40,9 @@ Once the Service is running, you can move on to [Launching the ADempiere Applica
 
 ## As a Service on Linux
 
-ADempiere can be setup a service on Ubuntu using systemd. 
+ADempiere can be setup a service on Ubuntu using systemd.
 
- Create a file called "adempiere.service" under the /lib/systemd/system/ directory
+Create a file called "adempiere.service" under the /lib/systemd/system/ directory
 
 ```text
 [Unit] Description=Task that runs the ADempiere ERP Service After=network.target After=systemd-user-sessions.service After=network-online.target
@@ -54,7 +54,7 @@ With the service defined, you can run the following commands to control it. You 
 
 | Command | Purpose |
 | :--- | :--- |
-| `systemctl daemon-reload`  | Loads the new service |
+| `systemctl daemon-reload` | Loads the new service |
 | `systemctl start adempiere` | Starts the ADempiere service. |
 | `service adempiere status` | Show the status of the ADempiere service |
 | `systemctl enable adempiere` | Enable the ADempiere service to it will restart on the next reboot/restart event. |
@@ -63,7 +63,7 @@ With the service defined, you can run the following commands to control it. You 
 | `systemctl is-enabled adempiere` | Use this to check if the service is currently configured to start or not on the next reboot. |
 
 {% hint style="info" %}
-The systemd script may fail if the memory runs out.  When the heap is full for some reason, the stop script will fail.   In that case,  try kill -9 using the service PID, wait for a few seconds then start the service again. System Administrators should add a health check to handle this condition.
+The systemd script may fail if the memory runs out. When the heap is full for some reason, the stop script will fail. In that case, try kill -9 using the service PID, wait for a few seconds then start the service again. System Administrators should add a health check to handle this condition.
 {% endhint %}
 
 If the server started with no errors, you can move on to [Launching the ADempiere Application](../../../introduction/getting-started/launching-the-application.md).
@@ -94,7 +94,7 @@ If the server started with no errors, you can move on to [Launching the ADempier
 
 ## Trouble Shooting
 
-Check the logs for errors. 
+Check the logs for errors.
 
 For JBoss, the logs are located at ADEMPIERE\_HOME/jboss/server/adempiere/logs or ADEMPIERE\_HOME/jboss/bin.
 

@@ -4,7 +4,7 @@ description: The main application menu
 
 # The Application Menu
 
-## The Application Menu   <a id="firstHeading"></a>
+## The Application Menu <a id="firstHeading"></a>
 
 ![](../../../.gitbook/assets/applicationmenu.PNG)
 
@@ -238,7 +238,7 @@ For reference, the following list contains all the options that will appear in t
     </tr>
     <tr>
       <td style="text-align:left">
-        <img src="../../../.gitbook/assets/info24.gif" alt/>
+        <img src="../../../.gitbook/assets/info24 (9).gif" alt/>
       </td>
       <td style="text-align:left"><a href="http://wiki.adempiere.net/CRP_Info">CRP Info</a>
       </td>
@@ -248,7 +248,7 @@ For reference, the following list contains all the options that will appear in t
     </tr>
     <tr>
       <td style="text-align:left">
-        <img src="../../../.gitbook/assets/info24.gif" alt/>
+        <img src="../../../.gitbook/assets/info24 (5).gif" alt/>
       </td>
       <td style="text-align:left"><a href="http://wiki.adempiere.net/Order_Info">Order Info</a>
       </td>
@@ -258,7 +258,7 @@ For reference, the following list contains all the options that will appear in t
     </tr>
     <tr>
       <td style="text-align:left">
-        <img src="../../../.gitbook/assets/info24.gif" alt/>
+        <img src="../../../.gitbook/assets/info24 (8).gif" alt/>
       </td>
       <td style="text-align:left"><a href="http://wiki.adempiere.net/Invoice_Info">Invoice Info</a>
       </td>
@@ -268,7 +268,7 @@ For reference, the following list contains all the options that will appear in t
     </tr>
     <tr>
       <td style="text-align:left">
-        <img src="../../../.gitbook/assets/info24.gif" alt/>
+        <img src="../../../.gitbook/assets/info24 (1).gif" alt/>
       </td>
       <td style="text-align:left"><a href="http://wiki.adempiere.net/Shipment_Info">Shipment Info</a>
       </td>
@@ -278,7 +278,7 @@ For reference, the following list contains all the options that will appear in t
     </tr>
     <tr>
       <td style="text-align:left">
-        <img src="../../../.gitbook/assets/info24.gif" alt/>
+        <img src="../../../.gitbook/assets/info24 (7).gif" alt/>
       </td>
       <td style="text-align:left"><a href="http://wiki.adempiere.net/Payment_Info">Payment Info</a>
       </td>
@@ -288,7 +288,7 @@ For reference, the following list contains all the options that will appear in t
     </tr>
     <tr>
       <td style="text-align:left">
-        <img src="../../../.gitbook/assets/info24.gif" alt/>
+        <img src="../../../.gitbook/assets/info24 (2).gif" alt/>
       </td>
       <td style="text-align:left"><a href="http://wiki.adempiere.net/Cash_Journal_Info">Cash Journal Info</a>
       </td>
@@ -298,7 +298,7 @@ For reference, the following list contains all the options that will appear in t
     </tr>
     <tr>
       <td style="text-align:left">
-        <img src="../../../.gitbook/assets/info24.gif" alt/>
+        <img src="../../../.gitbook/assets/info24 (6).gif" alt/>
       </td>
       <td style="text-align:left"><a href="http://wiki.adempiere.net/Resource_Info">Resource Info</a>
       </td>
@@ -308,7 +308,7 @@ For reference, the following list contains all the options that will appear in t
     </tr>
     <tr>
       <td style="text-align:left">
-        <img src="../../../.gitbook/assets/info24.gif" alt/>
+        <img src="../../../.gitbook/assets/info24 (4).gif" alt/>
       </td>
       <td style="text-align:left"><a href="http://wiki.adempiere.net/Resource_Info">Resource Info</a>
       </td>
@@ -318,7 +318,7 @@ For reference, the following list contains all the options that will appear in t
     </tr>
     <tr>
       <td style="text-align:left">
-        <img src="../../../.gitbook/assets/info24.gif" alt/>
+        <img src="../../../.gitbook/assets/info24 (3).gif" alt/>
       </td>
       <td style="text-align:left"><a href="http://wiki.adempiere.net/Asset_Info">Asset Info</a>
       </td>

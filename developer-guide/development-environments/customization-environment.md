@@ -27,13 +27,13 @@ You now have the main ADempiere project created. Changes to this project should 
 
 Fork the customization template project on GitHub from here: [https://github.com/adempiere/Customization-Template](https://github.com/adempiere/Customization-Template).
 
-Add the forked code as a new project to your IDE workspace that contains the ADempiere project you created above.   Then, modify the _**Project Properties**_ to point at the main ADempiere project.
+Add the forked code as a new project to your IDE workspace that contains the ADempiere project you created above. Then, modify the _**Project Properties**_ to point at the main ADempiere project.
 
 ![](../../.gitbook/assets/customizationbuildpathprojects.png)
 
 ### Customization of the Swing Interface
 
-For Swing, its pretty straight forward. Copy the source code you wish to customize from the main project, keeping the source directory structure the same. You can modify the code and then run the customization project to see the effects.  Many changes made while the code is running will be hot-swapped immediately.
+For Swing, its pretty straight forward. Copy the source code you wish to customize from the main project, keeping the source directory structure the same. You can modify the code and then run the customization project to see the effects. Many changes made while the code is running will be hot-swapped immediately.
 
 ### Customization of the ZK Interface
 
@@ -53,15 +53,15 @@ Delete all the contents of the zkwebui folder in the template except for the bui
 
 Copy the zkwebui directory from the ADempire project to the template. Be careful not to overwrite the build\_custom.xml file in the template. This will provide the same deployment structure as the main ADempiere project. \(This step is necessary and could be automated but risks overwriting your customization so it has been left as a manual process.\)
 
-In the _**Project Properties**_ for the template, verify that the Deployment Assembly for the template project matches the Deployment Assembly in the ADempiere project.  
+In the _**Project Properties**_ for the template, verify that the Deployment Assembly for the template project matches the Deployment Assembly in the ADempiere project.
 
 {% hint style="info" %}
-If you have doubts, simply copy the Deployment Assembly entries from the ADempiere project _.settings_/_org.eclipse.wst.common.component_  file to the same file in the template project.  Delete any _src_ directories that you won't be customizing and only keep the ones you will be using in the template.
+If you have doubts, simply copy the Deployment Assembly entries from the ADempiere project _.settings_/_org.eclipse.wst.common.component_ file to the same file in the template project. Delete any _src_ directories that you won't be customizing and only keep the ones you will be using in the template.
 {% endhint %}
 
 Run the External Launcher _**MyCustomizationProject InitializeZKCustomizations**_ - this will copy all the classes needed from the ADempiere project to the template. Depending on the version of ADempiere, you may need to modify the associated build.xml file. \(If you do this by hand from the build file, don't forget to refresh the project files.\)
 
-Create a server and add the template to the server following the [same process](creating-webui-workspace-using-eclipse-webtool.md#setup-the-webtool) as for the ADempiere project. Open the server properties and note the location where the project will be deployed.  This will typically be a folder like the following:
+Create a server and add the template to the server following the [same process](creating-webui-workspace-using-eclipse-webtool.md#setup-the-webtool) as for the ADempiere project. Open the server properties and note the location where the project will be deployed. This will typically be a folder like the following:
 
 ```text
 C:\dev\eclipse\custom-template-folder\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\MyCustomizationProject
@@ -73,13 +73,13 @@ In the project explorer, open the server folder and modify the context.xml file.
 <context reloadable="false">
 ```
 
-This will prevent Tomcat from reloading the context/application every time there is a change.  It only affects the Eclipse Tomcat server and is not required on any production server.
+This will prevent Tomcat from reloading the context/application every time there is a change. It only affects the Eclipse Tomcat server and is not required on any production server.
 
-Open the Project Properties and update the File Synchronization properties. Add the folder "MyCustomizationProject/zkwebui" as the source and set the target to the deployment location of the server. 
+Open the Project Properties and update the File Synchronization properties. Add the folder "MyCustomizationProject/zkwebui" as the source and set the target to the deployment location of the server.
 
 ![](../../.gitbook/assets/preferencescustomizationsettingssync.png)
 
-Publish the project to the server then, Open the server configuration and set the publishing setting to "Never publish".  Any changes made after this will be managed by the FileSync plugin.
+Publish the project to the server then, Open the server configuration and set the publishing setting to "Never publish". Any changes made after this will be managed by the FileSync plugin.
 
 ![](../../.gitbook/assets/serverneverpublish.png)
 

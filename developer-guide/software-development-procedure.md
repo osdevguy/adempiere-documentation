@@ -108,7 +108,7 @@ Here, a couple of important definitions are introduced shortly to help the under
 
 * The Maintainer manages the main repository \([https://github.com/adempiere/adempiere\](https://github.com/adempiere/adempiere%29\)
 * Developers should have their own account on GitHub.
-* Developers fork the main repository on GitHub to their personal account \([https://github.com/&lt;developerAcct&gt;/adempiere](https://github.com/<developerAcct>/adempiere%29\)\) and make a local clone of their personal fork.
+* Developers fork the main repository on GitHub to their personal account \([https://github.com/&lt;developerAcct&gt;/adempiere](https://github.com/<developerAcct>/adempiere%29%29\) and make a local clone of their personal fork.
 * Issues are tracked in GitHub on the main repository.  Commits that relate to that issue should include the hashtag for the issues \(e.g. \#123\).
 * Working on their local clone, developers should create a new branch for their work to correct an issue \(for example "fix/\#123\_myfix"\) or create a new “feature” branch.   These should branch from the most resent commits on the target branch that their work will be eventually be added to.  
 * Developers commit to their local clone and push to their fork using well documented commits.  Read the Github instructions for more information.
@@ -119,7 +119,7 @@ While the main repository will be following the branch naming very closely, deve
 {% endhint %}
 
 {% hint style="warning" %}
-While developers can work on any branch, the pull requests have to be made in sequence if more than one is made from a single branch.  This can get confusing.  Even if both pull requests have a single commit, the second one created will include the first making it difficult to reject the first and accept the second.  Best to keep the source for the pull requests on unique branches if possible.
+While developers can work on any branch, the pull requests have to be made in sequence if more than one is made from a single branch. This can get confusing. Even if both pull requests have a single commit, the second one created will include the first making it difficult to reject the first and accept the second. Best to keep the source for the pull requests on unique branches if possible.
 {% endhint %}
 
 ## Teams
@@ -219,7 +219,7 @@ There are already other teams that could be integrated into this Integration Pro
 
 ### Reverting policy
 
-Code that has been accepted by a pull request but subsequently found to have errors or other problems can be reverted.  This will be done by the repository maintainers with the concurrence of the Technical Team.
+Code that has been accepted by a pull request but subsequently found to have errors or other problems can be reverted. This will be done by the repository maintainers with the concurrence of the Technical Team.
 
 ### **Team Policy**
 

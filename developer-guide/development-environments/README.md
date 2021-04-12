@@ -289,7 +289,7 @@ Add these lines to Adempiere/utils\_dev/mybuild.properties:
 ### See also
 
 * The interesting German version [De\_DE/eclipse-setup](http://wiki.adempiere.net/De_DE/eclipse-setup) that goes right through debugging from the JBoss server.
-* [Hacker's guide](http://wiki.adempiere.net/Hacker's_guide)
+* \[Hacker's guide\]\([http://wiki.adempiere.net/Hacker's\_guide](http://wiki.adempiere.net/Hacker's_guide)\)
 * [Compile](http://wiki.adempiere.net/Compile)
 * [Creating WebUI Workspace using Eclipse Webtool](http://wiki.adempiere.net/Creating_WebUI_Workspace_using_Eclipse_Webtool)
 

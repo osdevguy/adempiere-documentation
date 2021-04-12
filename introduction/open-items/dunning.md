@@ -167,7 +167,7 @@ The **Entry** tab shows records for each Business Partner and Dunning Level. If 
 
 #### Dunning Run Line
 
-The Line _\*\*_tab list the invoices, payments, fees and interest being dunned. The fields are self explanatory.
+The Line \_\*\*\_tab list the invoices, payments, fees and interest being dunned. The fields are self explanatory.
 
 {% hint style="warning" %}
 The _**Times Dunned**_ field is a count of the number of times the item appears on Dunning Run Lines, including unprocessed ones. See issue [\#2365](https://github.com/adempiere/adempiere/issues/2365).

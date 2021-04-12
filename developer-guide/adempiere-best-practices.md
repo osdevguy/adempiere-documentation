@@ -23,11 +23,11 @@ The following guidelines describe the best practice when committing code in the 
 
 ### **Documentation**
 
-All changes to the code base need to be adequately documented so that others can easily find out why a change was made and have the necessary information to allow them to assist with maintaining the new code.  The level and amount of documentation should be in proportion to the degree the proposed change will impact on the behavior of Adempiere.
+All changes to the code base need to be adequately documented so that others can easily find out why a change was made and have the necessary information to allow them to assist with maintaining the new code. The level and amount of documentation should be in proportion to the degree the proposed change will impact on the behavior of Adempiere.
 
-All pull requests/commits must have some associated documentation such as a pull request, bug report or feature request.  At a minimum, an issue should be opened on Github and referenced in the commit.  The issue should be descriptive.  A one-line description is not sufficient to allow others to review your work in a meaningful way.  
+All pull requests/commits must have some associated documentation such as a pull request, bug report or feature request. At a minimum, an issue should be opened on Github and referenced in the commit. The issue should be descriptive. A one-line description is not sufficient to allow others to review your work in a meaningful way.
 
-Issues or bugs reported should include a description of how to reproduce the issue in the GardenWorld demo or a System account.  If it's not easily reproducible in GardenWorld, explain in detail what the issue is, in which scenarios the issue appears and the proposed solution \(if any\).
+Issues or bugs reported should include a description of how to reproduce the issue in the GardenWorld demo or a System account. If it's not easily reproducible in GardenWorld, explain in detail what the issue is, in which scenarios the issue appears and the proposed solution \(if any\).
 
 1. If you are reporting a feature request also provide a suggested use case. When you have implemented the feature request you must then explain how to use the new functionality.
 2. Larger changes are better documented in a a wiki page that also provides end user guidance.
@@ -36,8 +36,7 @@ Issues or bugs reported should include a description of how to reproduce the iss
 
    **Approval**
 
-5. Bug fixing can be done directly. If you are confident that you have found a bug and that you have a fix that does not have any adverse side effects, it is acceptable to commit directly without waiting for community consultation.
-   1. However, if there is any doubt, committers are advised to request further feedback before proceeding. [\[4\]](http://sourceforge.net/forum/message.php?msg_id=5828131)
+5. Bug fixing can be done directly. If you are confident that you have found a bug and that you have a fix that does not have any adverse side effects, it is acceptable to commit directly without waiting for community consultation. 1. However, if there is any doubt, committers are advised to request further feedback before proceeding. [\[4\]](http://sourceforge.net/forum/message.php?msg_id=5828131)
 6. Feature requests require community approval. To ensure that all new features will be useful to the community at large and properly implemented a process of community consultation must be undertaken.
    1. This involves proposing the contribution, addressing any concerns raised by community members \(paying particular attention to functional specialists\), and receiving a positive vote for the request. See the section on voting below.
    2. Getting community approval for implementing a feature request is not sufficient to guarantee acceptance of a contribution. All the other requirements outlined here must also be met.
@@ -48,10 +47,7 @@ Issues or bugs reported should include a description of how to reproduce the iss
 
    **Implementation**
 
-8. The implementation in code of a bug fix or feature contribution must adhere to the following guidelines.
-   1. To integrate into trunk a contribution must be complete, documented and testable
-   2. Do not commit half finished code into trunk in the hope that someone else will take it over.
-   3. If you wish to contribute work that you are unable to complete, supply it as a patch or separate branch. [\[6\]](http://sourceforge.net/forum/message.php?msg_id=5828131)
+8. The implementation in code of a bug fix or feature contribution must adhere to the following guidelines. 1. To integrate into trunk a contribution must be complete, documented and testable 2. Do not commit half finished code into trunk in the hope that someone else will take it over. 3. If you wish to contribute work that you are unable to complete, supply it as a patch or separate branch. [\[6\]](http://sourceforge.net/forum/message.php?msg_id=5828131)
 9. Don't drop existing elements or functions.
    1. Don't drop "not-added-by-you" things \(db elements or functionalities\). We must assume that any existing part of Adempiere may be being used by someone's implementation.
    2. Unless there is a good reason to drop it, for example functionality is really broken, do not drop it.
@@ -68,8 +64,7 @@ Issues or bugs reported should include a description of how to reproduce the iss
 
     **Code Style**
 
-14. Code must be properly indented
-    1. But don't re-indent fully working code just because it doesn't look exactly right in your IDE. The code might be indented nicely in someone elses IDE and if we keep reformatting according to our particular IDE we'll end up with a lot of commits but nothing really done. We won't be able to track "real" changes. [\[13\]](http://sourceforge.net/forum/message.php?msg_id=5828131)
+14. Code must be properly indented 1. But don't re-indent fully working code just because it doesn't look exactly right in your IDE. The code might be indented nicely in someone elses IDE and if we keep reformatting according to our particular IDE we'll end up with a lot of commits but nothing really done. We won't be able to track "real" changes. [\[13\]](http://sourceforge.net/forum/message.php?msg_id=5828131)
 15. Proper usage of variable names [\[14\]](http://sourceforge.net/forum/message.php?msg_id=5828131)
 16. All comments and variables in english [\[15\]](http://sourceforge.net/forum/message.php?msg_id=5828131)
 17. No duplicated code [\[16\]](http://sourceforge.net/forum/message.php?msg_id=5828131)
@@ -86,14 +81,14 @@ Issues or bugs reported should include a description of how to reproduce the iss
     1. Only commit if you are around to support or even revert in case of a problems.
 22. Update before commit:
     1. Do an SVN update and ensure all still compiles locally before you commit.
-23. Reference the BR/FR in the commit comments:
-    1. include the full url to the sourceforge BR/FR, but also include a short, but descriptive, comment that does not require the reader to go to the BR/FR in sourceforge unless they require details. Example:
+23. Reference the BR/FR in the commit comments: 1. include the full url to the sourceforge BR/FR, but also include a short, but descriptive, comment that does not require the reader to go to the BR/FR in sourceforge unless they require details. Example:
 
-       ```text
+    ```text
 
-       ```
+    ```
 
-       \[ 2354040 \] Implementation Replication Mode, Type, Eventhttp://sourceforge.net/tracker/index.php?func=detail&aid=2354040&group\_id=176962&atid=879335Enhance replication to allow export and import of documents and then execute the document status action.
+    \[ 2354040 \] Implementation Replication Mode, Type, Event[http://sourceforge.net/tracker/index.php?func=detail&aid=2354040&group\_id=176962&atid=879335Enhance](http://sourceforge.net/tracker/index.php?func=detail&aid=2354040&group_id=176962&atid=879335Enhance) replication to allow export and import of documents and then execute the document status action.
+
 24. Synchronise & Build:
     1. after committing sync again with the repository and confirm all still builds without errors.
 25. On successful commit Update the BR/FR:
@@ -169,7 +164,7 @@ Issues or bugs reported should include a description of how to reproduce the iss
      * @author <autor name>, <autor@email.com>                                    *
      * BF [ <number> ] or FR [ <number> ] Description about the bug tracker       *
      * URL of Tracker                                                             *
-     *  			                                                       *
+     *                                                                     *
      *****************************************************************************/
     ```
 
@@ -292,22 +287,22 @@ Issues or bugs reported should include a description of how to reproduce the iss
 
 81. ```text
     StringBuilder whereClause = new StringBuilder();
-    		whereClause.append("AD_Client_ID=?");          // #1
-    		whereClause.append(" AND AD_Org_ID=?");        // #2
-    		whereClause.append(" AND C_AcctSchema_ID=?");  // #3
-    		whereClause.append(" AND Account_ID=?");       // #4
+            whereClause.append("AD_Client_ID=?");          // #1
+            whereClause.append(" AND AD_Org_ID=?");        // #2
+            whereClause.append(" AND C_AcctSchema_ID=?");  // #3
+            whereClause.append(" AND Account_ID=?");       // #4
 
      MAccount existingAccount = new Query(ctx, I_C_ValidCombination.Table_Name, whereClause.toString(), null)
-     		.setParameters(new Object[]{AD_Client_ID, AD_Org_ID, C_AcctSchema_ID, Account_ID})
-     		.first();
+             .setParameters(new Object[]{AD_Client_ID, AD_Org_ID, C_AcctSchema_ID, Account_ID})
+             .first();
     ```
 82. Use the interface to put the Table Name I\_C\_ValidCombination.Table\_Name
 83. Use the StringBuilder when the **Where Clause** is built
 84. Use the final String whereClause when the **Where Clause** is not built If you know that your query should return ONLY one result, then you can assert this, and use **firstOnly** method instead of **first** method:
 85. ```text
      MAccount existingAccount = new Query(ctx, I_C_ValidCombination.Table_Name, whereClause, null)
-     		.setParameters(new Object[]{AD_Client_ID, AD_Org_ID, C_AcctSchema_ID, Account_ID})
-     		.firstOnly();
+             .setParameters(new Object[]{AD_Client_ID, AD_Org_ID, C_AcctSchema_ID, Account_ID})
+             .firstOnly();
     ```
 
     **How to return ARRAY of objects?**
@@ -315,12 +310,12 @@ Issues or bugs reported should include a description of how to reproduce the iss
 86. ```text
      public static MAchievement[] getOfMeasure (Properties ctx, int PA_Measure_ID)
      {
-     	final String whereClause = COLUMNNAME_PA_Measure_ID+"=?"; 
-     	List<MAchievement> list = new Query(ctx, I_PA_Achievement.Table_Name, whereClause, null)
-     		.setParameters(new Object[]{PA_Measure_ID})
-     		.setOrderBy(COLUMNNAME_SeqNo+", "+COLUMNNAME_DateDoc)
-     		.list();
-     	return list.toArray(new MAchievement[list.size()]);
+         final String whereClause = COLUMNNAME_PA_Measure_ID+"=?"; 
+         List<MAchievement> list = new Query(ctx, I_PA_Achievement.Table_Name, whereClause, null)
+             .setParameters(new Object[]{PA_Measure_ID})
+             .setOrderBy(COLUMNNAME_SeqNo+", "+COLUMNNAME_DateDoc)
+             .list();
+         return list.toArray(new MAchievement[list.size()]);
      }
     ```
 
@@ -329,31 +324,31 @@ Issues or bugs reported should include a description of how to reproduce the iss
 87. ```text
     public static MAchievement[] getOfMeasure (Properties ctx, int PA_Measure_ID)
     {
-    	String whereClause = COLUMNNAME_PA_Measure_ID+"=? AND "+COLUMNNAME_IsAchieved+"=?"; 
-    	List<MAchievement> list = new Query(ctx, MAchievement.Table_Name, whereClause, null)
-    		.setParameters(new Object[]{PA_Measure_ID, true})
-    		.setOrderBy(COLUMNNAME_SeqNo+", "+COLUMNNAME_DateDoc)
-    		.list();
-    	for(MAchievement achievement : list)
-    	{
-    	  s_log.fine(" - " + achievement);
-    	  // do some processing here
-    	}
-    	return list.toArray(new MAchievement[list.size()]);
+        String whereClause = COLUMNNAME_PA_Measure_ID+"=? AND "+COLUMNNAME_IsAchieved+"=?"; 
+        List<MAchievement> list = new Query(ctx, MAchievement.Table_Name, whereClause, null)
+            .setParameters(new Object[]{PA_Measure_ID, true})
+            .setOrderBy(COLUMNNAME_SeqNo+", "+COLUMNNAME_DateDoc)
+            .list();
+        for(MAchievement achievement : list)
+        {
+          s_log.fine(" - " + achievement);
+          // do some processing here
+        }
+        return list.toArray(new MAchievement[list.size()]);
     }
     ```
 
     **How to return one member of an object?**
 
 88. ```text
-    	public static int getWindow_ID(String windowName)
+        public static int getWindow_ID(String windowName)
             {
-    	    int retValue = 0;
-     	    String whereClause = COLUMNNAME_Name+"=?";
-    	    MWindow win = new Query(Env.getCtx(), MWindow.Table_Name, whereClause, null)
-    		  .setParameters(new Object[]{windowName})
-     		  .first();	
-     	     return = win.getAD_Window_ID(); 
+            int retValue = 0;
+             String whereClause = COLUMNNAME_Name+"=?";
+            MWindow win = new Query(Env.getCtx(), MWindow.Table_Name, whereClause, null)
+              .setParameters(new Object[]{windowName})
+               .first();    
+              return = win.getAD_Window_ID(); 
             }
     ```
 
@@ -364,13 +359,13 @@ Issues or bugs reported should include a description of how to reproduce the iss
     String trxName = ...;
 
     StringBuilder whereClause = new StringBuilder();
-    		whereClause.append("C_CashBook_ID=?");				//	#1
-    		whereClause.append(" AND TRUNC(StatementDate)=?");		//	#2
-    		whereClause.append(" AND Processed=?");				//	#3
-		
+            whereClause.append("C_CashBook_ID=?");                //    #1
+            whereClause.append(" AND TRUNC(StatementDate)=?");        //    #2
+            whereClause.append(" AND Processed=?");                //    #3
+
     MCash retValue = new Query(ctx, MCash.Table_Name, whereClause.toString(), trxName)
-    	.setParameters(new Object[]{C_CashBook_ID, TimeUtil.getDay(dateAcct), true})
-    	.first()
+        .setParameters(new Object[]{C_CashBook_ID, TimeUtil.getDay(dateAcct), true})
+        .first()
     ;
     ```
 
@@ -378,15 +373,15 @@ Issues or bugs reported should include a description of how to reproduce the iss
 
 90. ```text
     StringBuilder whereClause = new StringBuilder();
-    	whereClause.append("C_Cash.AD_Org_ID=?");			// #1
-    	whereClause.append(" AND TRUNC(C_Cash.StatementDate)=?");	// #2
-    	whereClause.append(" AND C_Cash.Processed='N'");		
-    	whereClause.append(" AND EXISTS (SELECT * FROM C_CashBook cb");
-    	whereClause.append(" WHERE C_Cash.C_CashBook_ID=cb.C_CashBook_ID AND cb.AD_Org_ID=C_Cash.AD_Org_ID");
-    	whereClause.append(" AND cb.C_Currency_ID=?)");			// #3
+        whereClause.append("C_Cash.AD_Org_ID=?");            // #1
+        whereClause.append(" AND TRUNC(C_Cash.StatementDate)=?");    // #2
+        whereClause.append(" AND C_Cash.Processed='N'");        
+        whereClause.append(" AND EXISTS (SELECT * FROM C_CashBook cb");
+        whereClause.append(" WHERE C_Cash.C_CashBook_ID=cb.C_CashBook_ID AND cb.AD_Org_ID=C_Cash.AD_Org_ID");
+        whereClause.append(" AND cb.C_Currency_ID=?)");            // #3
     MCash retValue = new Query(ctx, MCash.Table_Name, whereClause, trxName)
-    	.setParameters(new Object[]{AD_Org_ID,TimeUtil.getDay(dateAcct),C_Currency_ID})
-    	.first()
+        .setParameters(new Object[]{AD_Org_ID,TimeUtil.getDay(dateAcct),C_Currency_ID})
+        .first()
     ;
     ```
 
@@ -394,11 +389,10 @@ Issues or bugs reported should include a description of how to reproduce the iss
 
 91. For new callout code i always recomend to use GridTabWrapper class that is wrapping an GridTab object to an "persistent interface". For more info, there is an example on javadoc of the class. I am copy-paste here too:
 92. ```text
- 
     I_A_Asset_Disposed bean = GridTabWrapper.create(mTab, I_A_Asset_Disposed.class);  
     Timestamp dateDoc = (Timestamp)value;  
     bean.setDateAcct(dateDoc);  
-    bean.setA_Disposed_Date(dateDoc);  
+    bean.setA_Disposed_Date(dateDoc);
     ```
 
     Benefits:
@@ -557,18 +551,7 @@ Issues or bugs reported should include a description of how to reproduce the iss
 
      **Fair use**
 
-122. Some policies were proposed on this [thread](http://sourceforge.net/projects/adempiere/forums/forum/610546/topic/3426534):
-     1. Money collected from these sites \(i.e. advertising\) must go to German Foundation and help to sustain the project
-     2. Site sponsor, site seeder, and site maintainer can be advertised within a sponsors page and with a little box at the end of each page
-     3. If there are zkwebui interface then some advertising links are allowed in the initial page
-     4. Collecting visitor statistics must be made public for all community, or at least to project admins on request
-     5. The sites must not collect user information - ask for registration - or anything about \(unless by the nature of the site it's needed\)
-     6. No forums or support must happen on these sites - all support must be redirected to sourceforge forums
-     7. No wiki must be set up on these sites - all documentation must be redirected to adempiere wiki
-     8. The maintainer must be active, it the website becomes outdated more than one month then we must consider dropping the site, or calling for a new maintainer.
-     9. Adempiere citizens can call for vote on closing a site if there are at least 3 persons that think it's being abused or not following fair use practices.
-     10. Name of the subdomain must be previously discussed with community to reflect the goal and status of the site
-     11. Citizens can ask to add or cut advertising on the subdomain sites \(via voting process\)
+122. Some policies were proposed on this [thread](http://sourceforge.net/projects/adempiere/forums/forum/610546/topic/3426534): 1. Money collected from these sites \(i.e. advertising\) must go to German Foundation and help to sustain the project 2. Site sponsor, site seeder, and site maintainer can be advertised within a sponsors page and with a little box at the end of each page 3. If there are zkwebui interface then some advertising links are allowed in the initial page 4. Collecting visitor statistics must be made public for all community, or at least to project admins on request 5. The sites must not collect user information - ask for registration - or anything about \(unless by the nature of the site it's needed\) 6. No forums or support must happen on these sites - all support must be redirected to sourceforge forums 7. No wiki must be set up on these sites - all documentation must be redirected to adempiere wiki 8. The maintainer must be active, it the website becomes outdated more than one month then we must consider dropping the site, or calling for a new maintainer. 9. Adempiere citizens can call for vote on closing a site if there are at least 3 persons that think it's being abused or not following fair use practices. 10. Name of the subdomain must be previously discussed with community to reflect the goal and status of the site 11. Citizens can ask to add or cut advertising on the subdomain sites \(via voting process\)
 
 [Categories](http://wiki.adempiere.net/Special:Categories): [Community](http://wiki.adempiere.net/Category:Community) \| [Documentation](http://wiki.adempiere.net/Category:Documentation) \| [Code snippets](http://wiki.adempiere.net/Category:Code_snippets)
 
@@ -620,9 +603,6 @@ Issues or bugs reported should include a description of how to reproduce the iss
 * [Special pages](http://wiki.adempiere.net/Special:SpecialPages)
 * [Printable version](http://wiki.adempiere.net/index.php?title=ADempiere_Best_Practices&printable=yes)
 * [Permanent link](http://wiki.adempiere.net/index.php?title=ADempiere_Best_Practices&oldid=54389)
-
-
-
 * [Disclaimers](http://wiki.adempiere.net/ADempiere_ERP_Wiki:General_disclaimer)
 
 ## Source
