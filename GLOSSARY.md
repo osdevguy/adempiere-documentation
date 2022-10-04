@@ -14,7 +14,7 @@ Short form for the [**A**pplication **D**ictionary](system-administration/the-ap
 
 ## Application Dictionary
 
-A collection of meta-data that defines the look and behavior of the application.  Nearly every aspect of the ADempiere interface and functionality is defined by the Application Dictionary.  The application can also be easily extended with new functionality by adding to the Application Dictionary.  Also referred to as simply the "AD".
+A collection of meta-data that defines the look and behavior of the application. Nearly every aspect of the ADempiere interface and functionality is defined by the Application Dictionary. The application can also be easily extended with new functionality by adding to the Application Dictionary. Also referred to as simply the "AD".
 
 ## Application Server
 
@@ -50,7 +50,7 @@ A collection of information and also the process of collecting information for t
 
 ## Entity Type
 
-An entity type defines the "entity" or owner of a particular entry in the Application Dictionary.  The owner has responsiblity for the entry.  Entity Types "Dictionary" and "Adempiere" are reserved for the application developers and all Application Dictionary entries using these Entity Types will be overwritten every time the application is migrated to a new version.
+An entity type defines the "entity" or owner of a particular entry in the Application Dictionary. The owner has responsiblity for the entry. Entity Types "Dictionary" and "Adempiere" are reserved for the application developers and all Application Dictionary entries using these Entity Types will be overwritten every time the application is migrated to a new version.
 
 ## Identifier
 
